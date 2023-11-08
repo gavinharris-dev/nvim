@@ -7,6 +7,14 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+use({
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    requires = {
+        "nvim-lua/plenary.nvim",
+    },
+})
+
   use {
   "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -102,6 +110,5 @@ return require('packer').startup(function(use)
   use("folke/zen-mode.nvim")
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
-  use("laytan/cloak.nvim")
 
 end)
